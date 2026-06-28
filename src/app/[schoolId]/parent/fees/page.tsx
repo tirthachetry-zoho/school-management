@@ -47,9 +47,10 @@ function ParentFees() {
   );
 }
 
-export default function Page({ params }: { params: { schoolId: SchoolId } }) {
+export default function Page({ params }: { params: Promise<{ schoolId: SchoolId }> }) {
+  const { schoolId } = React.use(params);
   return (
-    <PortalLayout schoolId={params.schoolId} role="parent">
+    <PortalLayout schoolId={schoolId} role="parent">
       <ParentFees />
     </PortalLayout>
   );

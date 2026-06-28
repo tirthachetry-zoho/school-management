@@ -160,9 +160,10 @@ function AdminParents() {
   );
 }
 
-export default function Page({ params }: { params: { schoolId: SchoolId } }) {
+export default function Page({ params }: { params: Promise<{ schoolId: SchoolId }> }) {
+  const { schoolId } = React.use(params);
   return (
-    <PortalLayout schoolId={params.schoolId} role="admin">
+    <PortalLayout schoolId={schoolId} role="admin">
       <AdminParents />
     </PortalLayout>
   );

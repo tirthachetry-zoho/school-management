@@ -109,10 +109,11 @@ function AboutPage() {
   );
 }
 
-export default function Page({ params }: { params: { schoolId: SchoolId } }) {
+export default function Page({ params }: { params: Promise<{ schoolId: SchoolId }> }) {
+  const { schoolId } = React.use(params);
   return (
-    <SchoolProvider schoolId={params.schoolId}>
-      <SchoolLayout schoolId={params.schoolId}>
+    <SchoolProvider schoolId={schoolId}>
+      <SchoolLayout schoolId={schoolId}>
         <AboutPage />
       </SchoolLayout>
     </SchoolProvider>
