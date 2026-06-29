@@ -13,7 +13,7 @@ function GalleryPage() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedImage, setSelectedImage] = useState<any>(null);
 
-  const categories = ['all', ...Array.from(new Set(gallery.map((img: any) => img.category)))];
+  const categories: string[] = ['all', ...Array.from(new Set(gallery.map((img: any) => img.category))) as string[]];
   const filteredGallery = selectedCategory === 'all' 
     ? gallery 
     : gallery.filter((img: any) => img.category === selectedCategory);
