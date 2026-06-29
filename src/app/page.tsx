@@ -1,5 +1,9 @@
 import Link from 'next/link';
 import { SCHOOL_IDS, schoolThemes, schoolSettings } from '@/lib/schools';
+import * as springfieldData from '@/data/springfield/mock-data';
+import * as greenValleyData from '@/data/green-valley/mock-data';
+import * as royalHeritageData from '@/data/royal-heritage/mock-data';
+import * as futureTechData from '@/data/future-tech/mock-data';
 
 export default function Home() {
   return (
@@ -18,6 +22,14 @@ export default function Home() {
           {SCHOOL_IDS.map((schoolId) => {
             const theme = schoolThemes[schoolId];
             const settings = schoolSettings[schoolId];
+            const dataSources: Record<string, any> = {
+              'springfield': springfieldData,
+              'green-valley': greenValleyData,
+              'royal-heritage': royalHeritageData,
+              'future-tech': futureTechData,
+            };
+            const gallery = dataSources[schoolId]?.gallery || [];
+            const backgroundImage = gallery.length > 0 ? gallery[0].url : 'https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=1920&h=1080&fit=crop';
             return (
               <Link
                 key={schoolId}
@@ -27,7 +39,17 @@ export default function Home() {
                   background: theme.gradient,
                 }}
               >
-                <div className="p-8 text-white">
+                {/* Background Image with Light Opacity */}
+                <div className="absolute inset-0 z-0">
+                  <img
+                    src={backgroundImage}
+                    alt={`${theme.name} Background`}
+                    className="w-full h-full object-cover"
+                    style={{ opacity: 0.15 }}
+                  />
+                </div>
+                
+                <div className="p-8 text-white relative z-10">
                   <div className="flex items-start justify-between mb-4">
                     <div>
                       <h2 className="text-3xl font-bold mb-2" style={{ fontFamily: theme.fontFamily }}>

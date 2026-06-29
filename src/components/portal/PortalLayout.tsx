@@ -1,12 +1,13 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 import { SchoolId } from '@/lib/types';
 import { schoolThemes } from '@/lib/schools';
 import { getSession, clearSession } from '@/lib/storage';
 import { SchoolProvider, useSchool } from '@/components/school/SchoolProvider';
+import { Menu, X } from 'lucide-react';
 
 interface PortalLayoutProps {
   children: React.ReactNode;
@@ -54,6 +55,7 @@ function PortalLayoutInner({ children, role }: Omit<PortalLayoutProps, 'schoolId
   const pathname = usePathname();
   const router = useRouter();
   const session = getSession(schoolId);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   const handleLogout = () => {
     clearSession(schoolId);
@@ -80,18 +82,29 @@ function PortalLayoutInner({ children, role }: Omit<PortalLayoutProps, 'schoolId
         fontFamily: theme.fontFamily,
       }}
     >
+      {/* Mobile sidebar overlay */}
+      {isSidebarOpen && (
+        <div
+          className="fixed inset-0 bg-black/50 z-40 lg:hidden"
+          onClick={() => setIsSidebarOpen(false)}
+        />
+      )}
+
+      {/* Sidebar */}
       <aside
-        className="w-64 flex-shrink-0"
+        className={`fixed lg:static inset-y-0 left-0 z-50 w-64 flex-shrink-0 transform transition-transform duration-300 ease-in-out lg:translate-x-0 ${
+          isSidebarOpen ? 'translate-x-0' : '-translate-x-full'
+        }`}
         style={{
           background: theme.gradient,
         }}
       >
-        <div className="p-6">
-          <Link href={`/${schoolId}`} className="flex items-center space-x-2 mb-8">
-            <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center text-2xl font-bold" style={{ color: theme.primary }}>
+        <div className="p-4 sm:p-6">
+          <Link href={`/${schoolId}`} className="flex items-center space-x-2 mb-6 sm:mb-8">
+            <div className="w-8 h-8 sm:w-10 sm:h-10 bg-white rounded-lg flex items-center justify-center text-xl sm:text-2xl font-bold" style={{ color: theme.primary }}>
               {theme.name[0]}
             </div>
-            <span className="text-white font-bold text-lg">{theme.name}</span>
+            <span className="text-white font-bold text-base sm:text-lg">{theme.name}</span>
           </Link>
 
           <nav className="space-y-1">
@@ -99,7 +112,8 @@ function PortalLayoutInner({ children, role }: Omit<PortalLayoutProps, 'schoolId
               <Link
                 key={item.href}
                 href={item.href}
-                className={`block px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+                onClick={() => setIsSidebarOpen(false)}
+                className={`block px-3 sm:px-4 py-2 rounded-lg text-xs sm:text-sm font-medium transition-colors ${
                   isActive(item.href)
                     ? 'bg-white/20 text-white'
                     : 'text-white/80 hover:bg-white/10 hover:text-white'
@@ -111,34 +125,42 @@ function PortalLayoutInner({ children, role }: Omit<PortalLayoutProps, 'schoolId
           </nav>
         </div>
 
-        <div className="absolute bottom-0 left-0 w-64 p-6">
+        <div className="absolute bottom-0 left-0 w-64 p-4 sm:p-6">
           <button
             onClick={handleLogout}
-            className="w-full px-4 py-2 bg-white/20 text-white rounded-lg hover:bg-white/30 transition-colors text-sm font-medium"
+            className="w-full px-3 sm:px-4 py-2 bg-white/20 text-white rounded-lg hover:bg-white/30 transition-colors text-xs sm:text-sm font-medium"
           >
             Logout
           </button>
         </div>
       </aside>
 
-      <main className="flex-1 overflow-y-auto">
-        <header className="bg-white border-b border-gray-200 px-6 py-4">
+      <main className="flex-1 overflow-y-auto w-full">
+        <header className="bg-white border-b border-gray-200 px-4 sm:px-6 py-3 sm:py-4">
           <div className="flex items-center justify-between">
-            <div>
-              <h1 className="text-2xl font-bold" style={{ color: theme.text }}>
-                {role.charAt(0).toUpperCase() + role.slice(1)} Portal
-              </h1>
-              <p className="text-sm text-gray-500">Welcome, {session.name}</p>
+            <div className="flex items-center gap-3">
+              <button
+                onClick={() => setIsSidebarOpen(!isSidebarOpen)}
+                className="lg:hidden p-2 rounded-lg hover:bg-gray-100"
+              >
+                {isSidebarOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+              </button>
+              <div>
+                <h1 className="text-xl sm:text-2xl font-bold" style={{ color: theme.text }}>
+                  {role.charAt(0).toUpperCase() + role.slice(1)} Portal
+                </h1>
+                <p className="text-xs sm:text-sm text-gray-500">Welcome, {session.name}</p>
+              </div>
             </div>
-            <div className="flex items-center space-x-4">
-              <div className="w-10 h-10 rounded-full flex items-center justify-center font-bold text-white" style={{ background: theme.primary }}>
+            <div className="flex items-center space-x-2 sm:space-x-4">
+              <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full flex items-center justify-center font-bold text-white text-sm" style={{ background: theme.primary }}>
                 {session.name[0]}
               </div>
             </div>
           </div>
         </header>
 
-        <div className="p-6">{children}</div>
+        <div className="p-4 sm:p-6">{children}</div>
       </main>
     </div>
   );

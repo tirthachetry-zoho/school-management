@@ -21,6 +21,7 @@ function SchoolHomePage() {
   const featuredNews = news.filter((n: any) => n.isFeatured);
   const featuredEvents = events.filter((e: any) => e.isFeatured);
   const featuredGallery = gallery.slice(0, 6);
+  const backgroundImage = gallery.length > 0 ? gallery[0].url : 'https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=1920&h=1080&fit=crop';
 
   return (
     <div>
@@ -30,7 +31,17 @@ function SchoolHomePage() {
           background: theme.gradient,
         }}
       >
-        <div className="container mx-auto text-center text-white px-4">
+        {/* Background Image with Light Opacity */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src={backgroundImage}
+            alt="School Background"
+            className="w-full h-full object-cover"
+            style={{ opacity: 0.15 }}
+          />
+        </div>
+        
+        <div className="container mx-auto text-center text-white px-4 relative z-10">
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4" style={{ fontFamily: theme.fontFamily }}>
             {website.heroTitle}
           </h1>

@@ -9,6 +9,7 @@ import { Input } from '@/components/ui/Input';
 import { Button } from '@/components/ui/Button';
 import { Card, CardContent } from '@/components/ui/Card';
 import { setSession } from '@/lib/storage';
+import { getSchoolData } from '@/lib/data';
 
 function LoginPage() {
   const { schoolId, theme, settings } = useSchool();
@@ -17,6 +18,10 @@ function LoginPage() {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
+
+  // Get school-specific background image
+  const gallery = getSchoolData(schoolId as SchoolId, 'gallery');
+  const backgroundImage = gallery.length > 0 ? gallery[0].url : 'https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=1920&h=1080&fit=crop';
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -76,15 +81,25 @@ function LoginPage() {
   };
 
   return (
-    <div className="min-h-[calc(100vh-200px)] flex items-center justify-center py-16 px-4">
-      <div className="w-full max-w-md">
+    <div className="min-h-[calc(100vh-200px)] flex items-center justify-center py-8 sm:py-12 md:py-16 px-4 relative">
+      {/* Background Image with Light Opacity */}
+      <div className="absolute inset-0 z-0">
+        <img
+          src={backgroundImage}
+          alt="School Background"
+          className="w-full h-full object-cover"
+          style={{ opacity: 0.15 }}
+        />
+      </div>
+      
+      <div className="w-full max-w-md relative z-10">
         <Card>
-          <CardContent className="p-8">
-            <div className="text-center mb-8">
-              <h1 className="text-3xl font-bold mb-2" style={{ color: theme.text }}>
+          <CardContent className="p-6 sm:p-8">
+            <div className="text-center mb-6 sm:mb-8">
+              <h1 className="text-2xl sm:text-3xl font-bold mb-2" style={{ color: theme.text }}>
                 Login to {theme.name}
               </h1>
-              <p style={{ color: theme.textSecondary }}>
+              <p className="text-sm sm:text-base" style={{ color: theme.textSecondary }}>
                 Access your portal
               </p>
             </div>
@@ -120,8 +135,8 @@ function LoginPage() {
               </Button>
             </form>
 
-            <div className="mt-6 pt-6 border-t border-gray-200">
-              <p className="text-sm text-gray-600 mb-2">Demo Credentials:</p>
+            <div className="mt-4 sm:mt-6 pt-4 sm:pt-6 border-t border-gray-200">
+              <p className="text-xs sm:text-sm text-gray-600 mb-2">Demo Credentials:</p>
               <div className="text-xs space-y-1 text-gray-500">
                 <p>Admin: admin / admin123</p>
                 <p>Student: s1 / student123</p>

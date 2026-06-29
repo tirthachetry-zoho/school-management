@@ -22,63 +22,63 @@ function AdminDashboard() {
 
   return (
     <div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-8">
         <Card>
           <CardHeader>
-            <h3 className="text-sm font-medium text-gray-500">Total Students</h3>
+            <h3 className="text-xs sm:text-sm font-medium text-gray-500">Total Students</h3>
           </CardHeader>
           <CardContent>
-            <div className="text-3xl font-bold" style={{ color: theme.primary }}>
+            <div className="text-2xl sm:text-3xl font-bold" style={{ color: theme.primary }}>
               {activeStudents}
             </div>
-            <div className="text-sm text-gray-500 mt-1">Active students</div>
+            <div className="text-xs sm:text-sm text-gray-500 mt-1">Active students</div>
           </CardContent>
         </Card>
 
         <Card>
           <CardHeader>
-            <h3 className="text-sm font-medium text-gray-500">Total Teachers</h3>
+            <h3 className="text-xs sm:text-sm font-medium text-gray-500">Total Teachers</h3>
           </CardHeader>
           <CardContent>
-            <div className="text-3xl font-bold" style={{ color: theme.primary }}>
+            <div className="text-2xl sm:text-3xl font-bold" style={{ color: theme.primary }}>
               {activeTeachers}
             </div>
-            <div className="text-sm text-gray-500 mt-1">Active teachers</div>
+            <div className="text-xs sm:text-sm text-gray-500 mt-1">Active teachers</div>
           </CardContent>
         </Card>
 
         <Card>
           <CardHeader>
-            <h3 className="text-sm font-medium text-gray-500">Pending Fees</h3>
+            <h3 className="text-xs sm:text-sm font-medium text-gray-500">Pending Fees</h3>
           </CardHeader>
           <CardContent>
-            <div className="text-3xl font-bold" style={{ color: theme.primary }}>
+            <div className="text-2xl sm:text-3xl font-bold" style={{ color: theme.primary }}>
               ${pendingFees}
             </div>
-            <div className="text-sm text-gray-500 mt-1">Total pending</div>
+            <div className="text-xs sm:text-sm text-gray-500 mt-1">Total pending</div>
           </CardContent>
         </Card>
 
         <Card>
           <CardHeader>
-            <h3 className="text-sm font-medium text-gray-500">Upcoming Events</h3>
+            <h3 className="text-xs sm:text-sm font-medium text-gray-500">Upcoming Events</h3>
           </CardHeader>
           <CardContent>
-            <div className="text-3xl font-bold" style={{ color: theme.primary }}>
+            <div className="text-2xl sm:text-3xl font-bold" style={{ color: theme.primary }}>
               {upcomingEvents}
             </div>
-            <div className="text-sm text-gray-500 mt-1">Scheduled events</div>
+            <div className="text-xs sm:text-sm text-gray-500 mt-1">Scheduled events</div>
           </CardContent>
         </Card>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
         <Card>
           <CardHeader>
-            <h3 className="text-lg font-bold" style={{ color: theme.text }}>School Overview</h3>
+            <h3 className="text-base sm:text-lg font-bold" style={{ color: theme.text }}>School Overview</h3>
           </CardHeader>
           <CardContent>
-            <div className="space-y-2">
+            <div className="space-y-2 text-sm">
               <div><span className="font-medium">School Name:</span> {settings.schoolName}</div>
               <div><span className="font-medium">Principal:</span> {settings.principalName}</div>
               <div><span className="font-medium">Academic Year:</span> {settings.academicYear}</div>
@@ -90,37 +90,37 @@ function AdminDashboard() {
 
         <Card>
           <CardHeader>
-            <h3 className="text-lg font-bold" style={{ color: theme.text }}>Quick Actions</h3>
+            <h3 className="text-base sm:text-lg font-bold" style={{ color: theme.text }}>Quick Actions</h3>
           </CardHeader>
           <CardContent>
-            <div className="grid grid-cols-2 gap-3">
+            <div className="grid grid-cols-2 gap-2 sm:gap-3">
               <button
-                className="p-4 rounded-lg text-left transition-colors hover:opacity-80"
+                className="p-3 sm:p-4 rounded-lg text-left transition-colors hover:opacity-80"
                 style={{ background: theme.surface }}
               >
-                <div className="font-semibold mb-1">Add Student</div>
-                <div className="text-sm text-gray-500">Register new student</div>
+                <div className="font-semibold text-sm mb-1">Add Student</div>
+                <div className="text-xs text-gray-500">Register new student</div>
               </button>
               <button
-                className="p-4 rounded-lg text-left transition-colors hover:opacity-80"
+                className="p-3 sm:p-4 rounded-lg text-left transition-colors hover:opacity-80"
                 style={{ background: theme.surface }}
               >
-                <div className="font-semibold mb-1">Add Teacher</div>
-                <div className="text-sm text-gray-500">Hire new teacher</div>
+                <div className="font-semibold text-sm mb-1">Add Teacher</div>
+                <div className="text-xs text-gray-500">Hire new teacher</div>
               </button>
               <button
-                className="p-4 rounded-lg text-left transition-colors hover:opacity-80"
+                className="p-3 sm:p-4 rounded-lg text-left transition-colors hover:opacity-80"
                 style={{ background: theme.surface }}
               >
-                <div className="font-semibold mb-1">Create Event</div>
-                <div className="text-sm text-gray-500">Schedule new event</div>
+                <div className="font-semibold text-sm mb-1">Create Event</div>
+                <div className="text-xs text-gray-500">Schedule new event</div>
               </button>
               <button
-                className="p-4 rounded-lg text-left transition-colors hover:opacity-80"
+                className="p-3 sm:p-4 rounded-lg text-left transition-colors hover:opacity-80"
                 style={{ background: theme.surface }}
               >
-                <div className="font-semibold mb-1">Send Notice</div>
-                <div className="text-sm text-gray-500">Broadcast message</div>
+                <div className="font-semibold text-sm mb-1">Send Notice</div>
+                <div className="text-xs text-gray-500">Broadcast message</div>
               </button>
             </div>
           </CardContent>

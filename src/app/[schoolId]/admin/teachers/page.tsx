@@ -99,9 +99,9 @@ function AdminTeachers() {
 
   return (
     <div>
-      <div className="flex justify-between items-center mb-6">
-        <h2 className="text-2xl font-bold" style={{ color: theme.text }}>Teachers Management</h2>
-        <Button onClick={handleAdd} style={{ background: theme.primary, color: 'white' }}>
+      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 gap-4">
+        <h2 className="text-xl sm:text-2xl font-bold" style={{ color: theme.text }}>Teachers Management</h2>
+        <Button onClick={handleAdd} className="w-full sm:w-auto" style={{ background: theme.primary, color: 'white' }}>
           Add Teacher
         </Button>
       </div>
@@ -121,7 +121,7 @@ function AdminTeachers() {
         title={editingTeacher ? 'Edit Teacher' : 'Add Teacher'}
         size="lg"
       >
-        <form onSubmit={handleSubmit} className="space-y-4">
+        <form onSubmit={handleSubmit} className="space-y-4 max-h-[70vh] overflow-y-auto p-2">
           <Input
             label="First Name"
             value={formData.firstName}
