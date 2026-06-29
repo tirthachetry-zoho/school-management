@@ -1,28 +1,28 @@
 import { Student, Teacher, Parent, Event, GalleryImage, NewsArticle, FeeRecord, AttendanceRecord, Homework, Exam, Result } from '@/lib/types';
 
 export const students: Student[] = [
-  { id: 's1', firstName: 'Aria', lastName: 'Greenwood', email: 'aria.g@student.greenvalley.edu', phone: '555-1101', dateOfBirth: '2010-05-20', grade: '10', section: 'A', rollNumber: '101', parentId: 'p1', enrollmentDate: '2023-09-01', status: 'active' },
-  { id: 's2', firstName: 'Kai', lastName: 'Rivera', email: 'kai.r@student.greenvalley.edu', phone: '555-1102', dateOfBirth: '2010-09-14', grade: '10', section: 'B', rollNumber: '102', parentId: 'p2', enrollmentDate: '2023-09-01', status: 'active' },
-  { id: 's3', firstName: 'Luna', lastName: 'Patel', email: 'luna.p@student.greenvalley.edu', phone: '555-1103', dateOfBirth: '2011-02-28', grade: '9', section: 'A', rollNumber: '201', parentId: 'p3', enrollmentDate: '2022-09-01', status: 'active' },
-  { id: 's4', firstName: 'Zara', lastName: 'Okonkwo', email: 'zara.o@student.greenvalley.edu', phone: '555-1104', dateOfBirth: '2009-12-03', grade: '11', section: 'A', rollNumber: '301', parentId: 'p4', enrollmentDate: '2021-09-01', status: 'active' },
-  { id: 's5', firstName: 'Hiro', lastName: 'Nakamura', email: 'hiro.n@student.greenvalley.edu', phone: '555-1105', dateOfBirth: '2011-08-17', grade: '9', section: 'B', rollNumber: '202', parentId: 'p5', enrollmentDate: '2023-09-01', status: 'active' },
-  { id: 's6', firstName: 'Maya', lastName: 'Santos', email: 'maya.s@student.greenvalley.edu', phone: '555-1106', dateOfBirth: '2012-04-09', grade: '8', section: 'A', rollNumber: '401', parentId: 'p1', enrollmentDate: '2023-09-01', status: 'active' },
+  { id: 's1', firstName: 'Aditi', lastName: 'Sharma', email: 'aditi.s@greenvalley.in', phone: '+91 98765 53201', dateOfBirth: '2010-05-20', grade: '10', section: 'A', rollNumber: '101', parentId: 'p1', enrollmentDate: '2023-09-01', status: 'active' },
+  { id: 's2', firstName: 'Rahul', lastName: 'Patel', email: 'rahul.p@greenvalley.in', phone: '+91 98765 53202', dateOfBirth: '2010-09-14', grade: '10', section: 'B', rollNumber: '102', parentId: 'p2', enrollmentDate: '2023-09-01', status: 'active' },
+  { id: 's3', firstName: 'Sneha', lastName: 'Nair', email: 'sneha.n@greenvalley.in', phone: '+91 98765 53203', dateOfBirth: '2011-02-28', grade: '9', section: 'A', rollNumber: '201', parentId: 'p3', enrollmentDate: '2022-09-01', status: 'active' },
+  { id: 's4', firstName: 'Arnav', lastName: 'Iyer', email: 'arnav.i@greenvalley.in', phone: '+91 98765 53204', dateOfBirth: '2009-12-03', grade: '11', section: 'A', rollNumber: '301', parentId: 'p4', enrollmentDate: '2021-09-01', status: 'active' },
+  { id: 's5', firstName: 'Kavya', lastName: 'Reddy', email: 'kavya.r@greenvalley.in', phone: '+91 98765 53205', dateOfBirth: '2011-08-17', grade: '9', section: 'B', rollNumber: '202', parentId: 'p5', enrollmentDate: '2023-09-01', status: 'active' },
+  { id: 's6', firstName: 'Vivaan', lastName: 'Das', email: 'vivaan.d@greenvalley.in', phone: '+91 98765 53206', dateOfBirth: '2012-04-09', grade: '8', section: 'A', rollNumber: '401', parentId: 'p1', enrollmentDate: '2023-09-01', status: 'active' },
 ];
 
 export const teachers: Teacher[] = [
-  { id: 't1', firstName: 'Robert', lastName: 'Chen', email: 'robert.c@greenvalley.edu', phone: '555-1201', subject: 'Environmental Science', department: 'Sciences', joinDate: '2008-08-01', status: 'active', bio: 'Principal and environmental educator with a passion for sustainable learning.', qualification: 'Ph.D. Environmental Education' },
-  { id: 't2', firstName: 'Amara', lastName: 'Osei', email: 'amara.o@greenvalley.edu', phone: '555-1202', subject: 'Mathematics', department: 'STEM', joinDate: '2016-08-01', status: 'active', bio: 'Makes mathematics come alive through real-world problem solving.', qualification: 'M.Sc. Applied Mathematics' },
-  { id: 't3', firstName: 'Carlos', lastName: 'Mendez', email: 'carlos.m@greenvalley.edu', phone: '555-1203', subject: 'World Languages', department: 'Humanities', joinDate: '2014-08-01', status: 'active', bio: 'Trilingual educator specializing in immersive language learning.', qualification: 'M.A. Linguistics' },
-  { id: 't4', firstName: 'Priya', lastName: 'Sharma', email: 'priya.s@greenvalley.edu', phone: '555-1204', subject: 'Biology', department: 'Sciences', joinDate: '2017-08-01', status: 'active', bio: 'Marine biology enthusiast bringing ocean conservation to the classroom.', qualification: 'M.Sc. Marine Biology' },
-  { id: 't5', firstName: 'Daniel', lastName: 'Foster', email: 'daniel.f@greenvalley.edu', phone: '555-1205', subject: 'Art & Design', department: 'Creative Arts', joinDate: '2019-08-01', status: 'active', bio: 'Contemporary artist integrating digital and traditional media.', qualification: 'M.F.A. Visual Arts' },
+  { id: 't1', firstName: 'Rajesh', lastName: 'Kumar', email: 'rajesh.k@greenvalley.in', phone: '+91 98765 54201', subject: 'Environmental Science', department: 'Sciences', joinDate: '2008-08-01', status: 'active', bio: 'Principal and environmental educator with a passion for sustainable learning.', qualification: 'Ph.D. Environmental Education' },
+  { id: 't2', firstName: 'Sunita', lastName: 'Menon', email: 'sunita.m@greenvalley.in', phone: '+91 98765 54202', subject: 'Mathematics', department: 'STEM', joinDate: '2016-08-01', status: 'active', bio: 'Makes mathematics come alive through real-world problem solving.', qualification: 'M.Sc. Applied Mathematics' },
+  { id: 't3', firstName: 'Venkat', lastName: 'Rao', email: 'venkat.r@greenvalley.in', phone: '+91 98765 54203', subject: 'World Languages', department: 'Humanities', joinDate: '2014-08-01', status: 'active', bio: 'Trilingual educator specializing in immersive language learning.', qualification: 'M.A. Linguistics' },
+  { id: 't4', firstName: 'Lakshmi', lastName: 'Sharma', email: 'lakshmi.s@greenvalley.in', phone: '+91 98765 54204', subject: 'Biology', department: 'Sciences', joinDate: '2017-08-01', status: 'active', bio: 'Marine biology enthusiast bringing ocean conservation to the classroom.', qualification: 'M.Sc. Marine Biology' },
+  { id: 't5', firstName: 'Deepak', lastName: 'Verma', email: 'deepak.v@greenvalley.in', phone: '+91 98765 54205', subject: 'Art & Design', department: 'Creative Arts', joinDate: '2019-08-01', status: 'active', bio: 'Contemporary artist integrating digital and traditional media.', qualification: 'M.F.A. Visual Arts' },
 ];
 
 export const parents: Parent[] = [
-  { id: 'p1', firstName: 'James', lastName: 'Greenwood', email: 'james.g@email.com', phone: '555-1301', childrenIds: ['s1', 's6'], address: '100 Valley Road, Green Valley', occupation: 'Environmental Consultant' },
-  { id: 'p2', firstName: 'Sofia', lastName: 'Rivera', email: 'sofia.r@email.com', phone: '555-1302', childrenIds: ['s2'], address: '55 Desert Bloom Ave, Green Valley', occupation: 'Pharmacist' },
-  { id: 'p3', firstName: 'Raj', lastName: 'Patel', email: 'raj.p@email.com', phone: '555-1303', childrenIds: ['s3'], address: '22 Sage Street, Green Valley', occupation: 'Software Developer' },
-  { id: 'p4', firstName: 'Chioma', lastName: 'Okonkwo', email: 'chioma.o@email.com', phone: '555-1304', childrenIds: ['s4'], address: '78 Cactus Lane, Green Valley', occupation: 'Journalist' },
-  { id: 'p5', firstName: 'Yuki', lastName: 'Nakamura', email: 'yuki.n@email.com', phone: '555-1305', childrenIds: ['s5'], address: '33 Bamboo Court, Green Valley', occupation: 'Musician' },
+  { id: 'p1', firstName: 'Ramesh', lastName: 'Sharma', email: 'ramesh.sharma@email.com', phone: '+91 98765 55201', childrenIds: ['s1', 's6'], address: 'Electronic City, Bangalore', occupation: 'Software Engineer' },
+  { id: 'p2', firstName: 'Meena', lastName: 'Patel', email: 'meena.patel@email.com', phone: '+91 98765 55202', childrenIds: ['s2'], address: 'Koramangala, Bangalore', occupation: 'Doctor' },
+  { id: 'p3', firstName: 'Suresh', lastName: 'Nair', email: 'suresh.nair@email.com', phone: '+91 98765 55203', childrenIds: ['s3'], address: 'Indiranagar, Bangalore', occupation: 'Software Developer' },
+  { id: 'p4', firstName: 'Anita', lastName: 'Iyer', email: 'anita.iyer@email.com', phone: '+91 98765 55204', childrenIds: ['s4'], address: 'HSR Layout, Bangalore', occupation: 'Journalist' },
+  { id: 'p5', firstName: 'Krishna', lastName: 'Reddy', email: 'krishna.reddy@email.com', phone: '+91 98765 55205', childrenIds: ['s5'], address: 'Whitefield, Bangalore', occupation: 'Musician' },
 ];
 
 export const events: Event[] = [
@@ -33,10 +33,14 @@ export const events: Event[] = [
 ];
 
 export const gallery: GalleryImage[] = [
-  { id: 'g1', url: 'https://placehold.co/600x400/166534/ffffff?text=Green+Campus', caption: 'Our Lush Green Campus', category: 'campus', uploadDate: '2025-09-01' },
-  { id: 'g2', url: 'https://placehold.co/600x400/22c55e/ffffff?text=Garden+Lab', caption: 'Botanical Garden Laboratory', category: 'facilities', uploadDate: '2025-09-15' },
-  { id: 'g3', url: 'https://placehold.co/600x400/86efac/000000?text=Food+Fest', caption: 'International Food Festival 2025', category: 'events', uploadDate: '2025-10-20' },
-  { id: 'g4', url: 'https://placehold.co/600x400/166534/ffffff?text=Art+Studio', caption: 'Creative Arts Studio', category: 'facilities', uploadDate: '2025-11-05' },
+  { id: 'g1', url: 'https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=800&h=600&fit=crop', caption: 'Eco-Friendly School Campus', category: 'campus', uploadDate: '2025-09-01' },
+  { id: 'g2', url: 'https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=800&h=600&fit=crop', caption: 'Botanical Garden Learning Center', category: 'facilities', uploadDate: '2025-09-15' },
+  { id: 'g3', url: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&h=600&fit=crop', caption: 'International Food Festival 2025', category: 'festivals', uploadDate: '2025-10-20' },
+  { id: 'g4', url: 'https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=800&h=600&fit=crop', caption: 'Art and Design Studio', category: 'facilities', uploadDate: '2025-11-05' },
+  { id: 'g5', url: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop', caption: 'Yoga and Meditation Session', category: 'wellness', uploadDate: '2025-12-10' },
+  { id: 'g6', url: 'https://images.unsplash.com/photo-1509356843151-3e7d96241e11?w=800&h=600&fit=crop', caption: 'Environmental Science Field Trip', category: 'academics', uploadDate: '2026-01-15' },
+  { id: 'g7', url: 'https://images.unsplash.com/photo-1594608661623-aa0bd3a69799?w=800&h=600&fit=crop', caption: 'Organic School Garden', category: 'facilities', uploadDate: '2026-02-20' },
+  { id: 'g8', url: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=600&fit=crop', caption: 'Sports and Athletics Training', category: 'sports', uploadDate: '2026-03-10' },
 ];
 
 export const news: NewsArticle[] = [

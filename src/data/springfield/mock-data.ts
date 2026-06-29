@@ -1,33 +1,33 @@
 import { Student, Teacher, Parent, Event, GalleryImage, NewsArticle, FeeRecord, AttendanceRecord, Homework, Exam, Result } from '@/lib/types';
 
 export const students: Student[] = [
-  { id: 's1', firstName: 'Emma', lastName: 'Thompson', email: 'emma.t@student.springfield.edu', phone: '555-0101', dateOfBirth: '2010-03-15', grade: '10', section: 'A', rollNumber: '101', parentId: 'p1', enrollmentDate: '2023-09-01', status: 'active' },
-  { id: 's2', firstName: 'Liam', lastName: 'Martinez', email: 'liam.m@student.springfield.edu', phone: '555-0102', dateOfBirth: '2010-07-22', grade: '10', section: 'A', rollNumber: '102', parentId: 'p2', enrollmentDate: '2023-09-01', status: 'active' },
-  { id: 's3', firstName: 'Olivia', lastName: 'Anderson', email: 'olivia.a@student.springfield.edu', phone: '555-0103', dateOfBirth: '2011-01-10', grade: '9', section: 'B', rollNumber: '201', parentId: 'p3', enrollmentDate: '2022-09-01', status: 'active' },
-  { id: 's4', firstName: 'Noah', lastName: 'Williams', email: 'noah.w@student.springfield.edu', phone: '555-0104', dateOfBirth: '2009-11-30', grade: '11', section: 'A', rollNumber: '301', parentId: 'p4', enrollmentDate: '2021-09-01', status: 'active' },
-  { id: 's5', firstName: 'Ava', lastName: 'Davis', email: 'ava.d@student.springfield.edu', phone: '555-0105', dateOfBirth: '2011-05-18', grade: '9', section: 'A', rollNumber: '202', parentId: 'p5', enrollmentDate: '2023-09-01', status: 'active' },
-  { id: 's6', firstName: 'Ethan', lastName: 'Brown', email: 'ethan.b@student.springfield.edu', phone: '555-0106', dateOfBirth: '2012-09-25', grade: '8', section: 'A', rollNumber: '401', parentId: 'p1', enrollmentDate: '2023-09-01', status: 'active' },
-  { id: 's7', firstName: 'Sophia', lastName: 'Wilson', email: 'sophia.w@student.springfield.edu', phone: '555-0107', dateOfBirth: '2010-04-12', grade: '10', section: 'B', rollNumber: '103', parentId: 'p6', enrollmentDate: '2022-09-01', status: 'active' },
-  { id: 's8', firstName: 'Mason', lastName: 'Taylor', email: 'mason.t@student.springfield.edu', phone: '555-0108', dateOfBirth: '2009-08-07', grade: '11', section: 'B', rollNumber: '302', parentId: 'p7', enrollmentDate: '2021-09-01', status: 'inactive' },
+  { id: 's1', firstName: 'Aarav', lastName: 'Sharma', email: 'aarav.s@delhipublicacademy.in', phone: '+91 98765 43210', dateOfBirth: '2010-03-15', grade: '10', section: 'A', rollNumber: '101', parentId: 'p1', enrollmentDate: '2023-09-01', status: 'active' },
+  { id: 's2', firstName: 'Vihaan', lastName: 'Patel', email: 'vihaan.p@delhipublicacademy.in', phone: '+91 98765 43211', dateOfBirth: '2010-07-22', grade: '10', section: 'A', rollNumber: '102', parentId: 'p2', enrollmentDate: '2023-09-01', status: 'active' },
+  { id: 's3', firstName: 'Diya', lastName: 'Singh', email: 'diya.s@delhipublicacademy.in', phone: '+91 98765 43212', dateOfBirth: '2011-01-10', grade: '9', section: 'B', rollNumber: '201', parentId: 'p3', enrollmentDate: '2022-09-01', status: 'active' },
+  { id: 's4', firstName: 'Arjun', lastName: 'Kumar', email: 'arjun.k@delhipublicacademy.in', phone: '+91 98765 43213', dateOfBirth: '2009-11-30', grade: '11', section: 'A', rollNumber: '301', parentId: 'p4', enrollmentDate: '2021-09-01', status: 'active' },
+  { id: 's5', firstName: 'Ananya', lastName: 'Verma', email: 'ananya.v@delhipublicacademy.in', phone: '+91 98765 43214', dateOfBirth: '2011-05-18', grade: '9', section: 'A', rollNumber: '202', parentId: 'p5', enrollmentDate: '2023-09-01', status: 'active' },
+  { id: 's6', firstName: 'Kabir', lastName: 'Gupta', email: 'kabir.g@delhipublicacademy.in', phone: '+91 98765 43215', dateOfBirth: '2012-09-25', grade: '8', section: 'A', rollNumber: '401', parentId: 'p1', enrollmentDate: '2023-09-01', status: 'active' },
+  { id: 's7', firstName: 'Ishita', lastName: 'Mehta', email: 'ishita.m@delhipublicacademy.in', phone: '+91 98765 43216', dateOfBirth: '2010-04-12', grade: '10', section: 'B', rollNumber: '103', parentId: 'p6', enrollmentDate: '2022-09-01', status: 'active' },
+  { id: 's8', firstName: 'Rohan', lastName: 'Jain', email: 'rohan.j@delhipublicacademy.in', phone: '+91 98765 43217', dateOfBirth: '2009-08-07', grade: '11', section: 'B', rollNumber: '302', parentId: 'p7', enrollmentDate: '2021-09-01', status: 'inactive' },
 ];
 
 export const teachers: Teacher[] = [
-  { id: 't1', firstName: 'Barbara', lastName: 'Johnson', email: 'barbara.j@springfield.edu', phone: '555-0201', subject: 'Mathematics', department: 'STEM', joinDate: '2010-08-01', status: 'active', bio: 'Principal and Mathematics Department Head with 20+ years of experience in education leadership.', qualification: 'Ph.D. Mathematics Education' },
-  { id: 't2', firstName: 'James', lastName: 'Mitchell', email: 'james.m@springfield.edu', phone: '555-0202', subject: 'Physics', department: 'STEM', joinDate: '2015-08-01', status: 'active', bio: 'Passionate about making physics accessible through hands-on experiments.', qualification: 'M.Sc. Physics' },
-  { id: 't3', firstName: 'Sarah', lastName: 'Williams', email: 'sarah.w@springfield.edu', phone: '555-0203', subject: 'English Literature', department: 'Humanities', joinDate: '2012-08-01', status: 'active', bio: 'Award-winning literature teacher and school debate club advisor.', qualification: 'M.A. English Literature' },
-  { id: 't4', firstName: 'Michael', lastName: 'Chen', email: 'michael.c@springfield.edu', phone: '555-0204', subject: 'Computer Science', department: 'STEM', joinDate: '2018-08-01', status: 'active', bio: 'Former software engineer bringing real-world tech experience to the classroom.', qualification: 'M.S. Computer Science' },
-  { id: 't5', firstName: 'Emily', lastName: 'Roberts', email: 'emily.r@springfield.edu', phone: '555-0205', subject: 'Biology', department: 'STEM', joinDate: '2016-08-01', status: 'active', bio: 'Environmental science advocate and biology olympiad coach.', qualification: 'M.Sc. Biology' },
-  { id: 't6', firstName: 'David', lastName: 'Park', email: 'david.p@springfield.edu', phone: '555-0206', subject: 'History', department: 'Humanities', joinDate: '2014-08-01', status: 'active', bio: 'Specializes in modern world history and critical thinking development.', qualification: 'Ph.D. History' },
+  { id: 't1', firstName: 'Anjali', lastName: 'Sharma', email: 'anjali.s@delhipublicacademy.in', phone: '+91 98765 43201', subject: 'Mathematics', department: 'STEM', joinDate: '2010-08-01', status: 'active', bio: 'Principal and Mathematics Department Head with 20+ years of experience in education leadership.', qualification: 'Ph.D. Mathematics Education' },
+  { id: 't2', firstName: 'Rajesh', lastName: 'Verma', email: 'rajesh.v@delhipublicacademy.in', phone: '+91 98765 43202', subject: 'Physics', department: 'STEM', joinDate: '2015-08-01', status: 'active', bio: 'Passionate about making physics accessible through hands-on experiments.', qualification: 'M.Sc. Physics' },
+  { id: 't3', firstName: 'Priya', lastName: 'Singh', email: 'priya.s@delhipublicacademy.in', phone: '+91 98765 43203', subject: 'English Literature', department: 'Humanities', joinDate: '2012-08-01', status: 'active', bio: 'Award-winning literature teacher and school debate club advisor.', qualification: 'M.A. English Literature' },
+  { id: 't4', firstName: 'Vikram', lastName: 'Chopra', email: 'vikram.c@delhipublicacademy.in', phone: '+91 98765 43204', subject: 'Computer Science', department: 'STEM', joinDate: '2018-08-01', status: 'active', bio: 'Former software engineer bringing real-world tech experience to the classroom.', qualification: 'M.S. Computer Science' },
+  { id: 't5', firstName: 'Meera', lastName: 'Reddy', email: 'meera.r@delhipublicacademy.in', phone: '+91 98765 43205', subject: 'Biology', department: 'STEM', joinDate: '2016-08-01', status: 'active', bio: 'Environmental science advocate and biology olympiad coach.', qualification: 'M.Sc. Biology' },
+  { id: 't6', firstName: 'Amit', lastName: 'Desai', email: 'amit.d@delhipublicacademy.in', phone: '+91 98765 43206', subject: 'History', department: 'Humanities', joinDate: '2014-08-01', status: 'active', bio: 'Specializes in modern world history and critical thinking development.', qualification: 'Ph.D. History' },
 ];
 
 export const parents: Parent[] = [
-  { id: 'p1', firstName: 'Robert', lastName: 'Thompson', email: 'robert.t@email.com', phone: '555-0301', childrenIds: ['s1', 's6'], address: '42 Oak Street, Springfield', occupation: 'Engineer' },
-  { id: 'p2', firstName: 'Maria', lastName: 'Martinez', email: 'maria.m@email.com', phone: '555-0302', childrenIds: ['s2'], address: '17 Pine Avenue, Springfield', occupation: 'Doctor' },
-  { id: 'p3', firstName: 'Jennifer', lastName: 'Anderson', email: 'jennifer.a@email.com', phone: '555-0303', childrenIds: ['s3'], address: '8 Maple Drive, Springfield', occupation: 'Teacher' },
-  { id: 'p4', firstName: 'William', lastName: 'Williams', email: 'william.w@email.com', phone: '555-0304', childrenIds: ['s4'], address: '23 Elm Court, Springfield', occupation: 'Lawyer' },
-  { id: 'p5', firstName: 'Lisa', lastName: 'Davis', email: 'lisa.d@email.com', phone: '555-0305', childrenIds: ['s5'], address: '5 Cedar Lane, Springfield', occupation: 'Architect' },
-  { id: 'p6', firstName: 'Thomas', lastName: 'Wilson', email: 'thomas.w@email.com', phone: '555-0306', childrenIds: ['s7'], address: '31 Birch Road, Springfield', occupation: 'Business Owner' },
-  { id: 'p7', firstName: 'Patricia', lastName: 'Taylor', email: 'patricia.t@email.com', phone: '555-0307', childrenIds: ['s8'], address: '12 Walnut Street, Springfield', occupation: 'Nurse' },
+  { id: 'p1', firstName: 'Rajesh', lastName: 'Sharma', email: 'rajesh.sharma@email.com', phone: '+91 98765 43001', childrenIds: ['s1', 's6'], address: 'Sector 15, Rohini, New Delhi', occupation: 'Engineer' },
+  { id: 'p2', firstName: 'Sunita', lastName: 'Patel', email: 'sunita.patel@email.com', phone: '+91 98765 43002', childrenIds: ['s2'], address: 'Sector 18, Rohini, New Delhi', occupation: 'Doctor' },
+  { id: 'p3', firstName: 'Vikram', lastName: 'Singh', email: 'vikram.singh@email.com', phone: '+91 98765 43003', childrenIds: ['s3'], address: 'Sector 7, Rohini, New Delhi', occupation: 'Teacher' },
+  { id: 'p4', firstName: 'Amit', lastName: 'Kumar', email: 'amit.kumar@email.com', phone: '+91 98765 43004', childrenIds: ['s4'], address: 'Sector 9, Rohini, New Delhi', occupation: 'Lawyer' },
+  { id: 'p5', firstName: 'Neha', lastName: 'Verma', email: 'neha.verma@email.com', phone: '+91 98765 43005', childrenIds: ['s5'], address: 'Sector 12, Rohini, New Delhi', occupation: 'Architect' },
+  { id: 'p6', firstName: 'Sanjay', lastName: 'Mehta', email: 'sanjay.mehta@email.com', phone: '+91 98765 43006', childrenIds: ['s7'], address: 'Sector 14, Rohini, New Delhi', occupation: 'Business Owner' },
+  { id: 'p7', firstName: 'Kavita', lastName: 'Jain', email: 'kavita.jain@email.com', phone: '+91 98765 43007', childrenIds: ['s8'], address: 'Sector 16, Rohini, New Delhi', occupation: 'Nurse' },
 ];
 
 export const events: Event[] = [
@@ -39,12 +39,18 @@ export const events: Event[] = [
 ];
 
 export const gallery: GalleryImage[] = [
-  { id: 'g1', url: 'https://placehold.co/600x400/1e40af/ffffff?text=Campus+View', caption: 'Main Campus Aerial View', category: 'campus', uploadDate: '2025-09-01' },
-  { id: 'g2', url: 'https://placehold.co/600x400/3b82f6/ffffff?text=Science+Lab', caption: 'State-of-the-art Science Laboratory', category: 'facilities', uploadDate: '2025-09-15' },
-  { id: 'g3', url: 'https://placehold.co/600x400/60a5fa/ffffff?text=Sports+Day', caption: 'Annual Sports Day Celebration', category: 'events', uploadDate: '2025-10-20' },
-  { id: 'g4', url: 'https://placehold.co/600x400/1e40af/ffffff?text=Library', caption: 'Digital Library Resource Center', category: 'facilities', uploadDate: '2025-11-05' },
-  { id: 'g5', url: 'https://placehold.co/600x400/3b82f6/ffffff?text=Graduation', caption: 'Class of 2025 Graduation Ceremony', category: 'events', uploadDate: '2025-12-10' },
-  { id: 'g6', url: 'https://placehold.co/600x400/60a5fa/ffffff?text=Art+Room', caption: 'Creative Arts Studio', category: 'facilities', uploadDate: '2026-01-15' },
+  { id: 'g1', url: 'https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=800&h=600&fit=crop', caption: 'School Campus During Diwali Celebration', category: 'festivals', uploadDate: '2025-11-01' },
+  { id: 'g2', url: 'https://images.unsplash.com/photo-1577896851231-70ef18881754?w=800&h=600&fit=crop', caption: 'Annual Sports Day - March Past Ceremony', category: 'sports', uploadDate: '2025-12-15' },
+  { id: 'g3', url: 'https://images.unsplash.com/photo-1509062522246-3755977927d7?w=800&h=600&fit=crop', caption: 'Students Performing Classical Dance', category: 'cultural', uploadDate: '2025-10-20' },
+  { id: 'g4', url: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&h=600&fit=crop', caption: 'Modern Science Laboratory', category: 'facilities', uploadDate: '2025-09-10' },
+  { id: 'g5', url: 'https://images.unsplash.com/photo-1546410531-bb4caa6b424d?w=800&h=600&fit=crop', caption: 'Holi Festival Celebration', category: 'festivals', uploadDate: '2025-03-25' },
+  { id: 'g6', url: 'https://images.unsplash.com/photo-1562774053-701939374585?w=800&h=600&fit=crop', caption: 'Digital Library with E-Resources', category: 'facilities', uploadDate: '2025-08-15' },
+  { id: 'g7', url: 'https://images.unsplash.com/photo-1596464716127-f2a82984de30?w=800&h=600&fit=crop', caption: 'Independence Day Celebration', category: 'cultural', uploadDate: '2025-08-15' },
+  { id: 'g8', url: 'https://images.unsplash.com/photo-1571260899304-425eee4c7efc?w=800&h=600&fit=crop', caption: 'Robotics Workshop', category: 'academics', uploadDate: '2025-11-20' },
+  { id: 'g9', url: 'https://images.unsplash.com/photo-1517649763962-0c623066013b?w=800&h=600&fit=crop', caption: 'Inter-School Cricket Tournament', category: 'sports', uploadDate: '2025-01-10' },
+  { id: 'g10', url: 'https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=800&h=600&fit=crop', caption: 'Smart Classroom with Interactive Boards', category: 'facilities', uploadDate: '2025-07-01' },
+  { id: 'g11', url: 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&h=600&fit=crop', caption: 'Music and Arts Performance', category: 'cultural', uploadDate: '2025-09-25' },
+  { id: 'g12', url: 'https://images.unsplash.com/photo-1588072432836-e10032774350?w=800&h=600&fit=crop', caption: 'Annual Science Exhibition', category: 'academics', uploadDate: '2025-02-10' },
 ];
 
 export const news: NewsArticle[] = [
